@@ -12,6 +12,11 @@
 
   system.primaryUser = "oscar";
 
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToControl = true;
+  };
+
   environment.systemPackages = with pkgs; [
     vim
     curl
