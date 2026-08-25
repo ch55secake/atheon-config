@@ -20,6 +20,7 @@
   system.defaults = {
     NSGlobalDomain = {
       AppleICUForce24HourTime = false;
+      "com.apple.swipescrolldirection" = false;
     };
 
     dock = {
