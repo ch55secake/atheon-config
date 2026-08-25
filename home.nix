@@ -7,6 +7,10 @@
 
   home.packages = with pkgs; [
   	just
+        go 
+        gopls 
+        python3
+        uv
   ];
 
   home.file = {
@@ -46,7 +50,7 @@
      gd = "git diff";
      gco = "git checkout";
      gb = "git branch";
-    
+   
      nr = "nix run";
      update = "cd ~/Projects/atheon-config && nix flake update && rebuild";
 
