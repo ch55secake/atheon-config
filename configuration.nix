@@ -17,10 +17,16 @@
     remapCapsLockToControl = true;
   };
 
-  system.defaults.dock = {
-    autohide = true;
-    show-recents = false;
-    mru-spaces = false;
+  system.defaults = {
+    NSGlobalDomain = {
+      AppleICUForce24HourTime = false;
+    };
+
+    dock = {
+      autohide = true;
+      show-recents = false;
+      mru-spaces = false;
+    };
   };
 
   environment.systemPackages = with pkgs; [
