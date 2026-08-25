@@ -17,6 +17,12 @@
     remapCapsLockToControl = true;
   };
 
+  system.defaults.dock = {
+    autohide = true;
+    show-recents = false;
+    mru-spaces = false;
+  };
+
   environment.systemPackages = with pkgs; [
     vim
     curl
