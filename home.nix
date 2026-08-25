@@ -9,6 +9,10 @@
   	just
   ];
 
+  home.file = {
+       ".hushlogin".text = "";
+  };
+
   programs.git = {
     enable = true;
 
