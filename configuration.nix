@@ -56,6 +56,7 @@
      "btop"
      "bat"
      "gh"
+     "herdr"
    ];
 
    casks = [
