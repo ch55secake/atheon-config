@@ -18,16 +18,22 @@
   };
 
   programs.git = {
-    enable = true;
+   enable = true;
 
-    settings = {
-      user = {
-        name = "ch55secake";
-        email = "oscardjbackup@gmail.com";
-      };
+   settings = {
+     user = {
+       name = "ch55secake";
+       email = "oscardjbackup@gmail.com";
+     };
 
-      init.defaultBranch = "main";
-      pull.rebase = true;
+     init.defaultBranch = "main";
+     pull.rebase = true;
+   };
+
+    signing = {
+      key = "/Users/oscar/.ssh/id_ed25519.pub";
+      format = "ssh";
+      signByDefault = true;
     };
   };
 
