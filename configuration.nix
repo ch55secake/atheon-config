@@ -25,21 +25,31 @@
   programs.zsh.enableCompletion = true;
 
   homebrew = {
-    enable = true;
-    enableZshIntegration = true;
+   enable = true;
+   enableZshIntegration = true;
 
-    brews = [
-    ];
+   taps = [
+     "anomalyco/tap"
+     "nikitabobko/tap"
+   ];
 
-    casks = [
-    ];
+   brews = [
+     "anomalyco/tap/opencode"
+   ];
 
-    onActivation = {
-      autoUpdate = true;
-      upgrade = true;
-      cleanup = "uninstall";
-    };
-  };
+   casks = [
+     "ghostty"
+     "pycharm"
+     "intellij-idea"
+     "nikitabobko/tap/aerospace"
+   ];
+
+   onActivation = {
+     autoUpdate = true;
+     upgrade = true;
+     cleanup = "uninstall";
+   };
+ };  
 
   system.stateVersion = 6;
 }
