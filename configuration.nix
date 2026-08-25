@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  # Determinate manages the Nix installation/daemon.
+  # Prevent nix-darwin from trying to manage it too.	  
+  nix.enable = false;
+
   environment.systemPackages = with pkgs; [
     git
     vim
