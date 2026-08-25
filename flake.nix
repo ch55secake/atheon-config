@@ -1,5 +1,5 @@
 {
-  description = "macOs machine config";
+  description = "macOS machine config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -8,26 +8,36 @@
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, ... }:
-    let
-      configuration = { pkgs, ... }: {
-        imports = [
-          ./configuration.nix
-        ];
-
-        # Required for backwards compatibility.
-        system.stateVersion = 6;
-
-        # Platform for Apple Silicon Macs.
-        nixpkgs.hostPlatform = "aarch64-darwin";
-      };
-    in
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      nix-darwin,
+      home-manager,
+      ...
+    }:
     {
       darwinConfigurations."atheon" =
         nix-darwin.lib.darwinSystem {
-          modules = [ configuration ];
+          modules = [
+            ./configuration.nix
+
+            home-manager.darwinModules.home-manager
+
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.users.oscar = import ./home.nix;
+            }
+          ];
         };
     };
 }
