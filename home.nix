@@ -14,7 +14,13 @@
   ];
 
   home.file = {
-       ".hushlogin".text = "";
+    # Silence the macOS login message
+    ".hushlogin".text = "";
+
+    # SSH keys trusted for Git signature verification
+    ".config/git/allowed_signers".text = ''
+      oscardjbackup@gmail.com ${builtins.readFile ./keys/oscar.pub}
+    '';
   };
 
   programs.git = {
@@ -28,6 +34,9 @@
 
      init.defaultBranch = "main";
      pull.rebase = true;
+
+     gpg.ssh.allowedSignersFile =
+      "/Users/oscar/.config/git/allowed_signers";
    };
 
     signing = {
