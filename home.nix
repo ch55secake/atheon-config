@@ -3,12 +3,7 @@
 {
   home.username = "oscar";
   home.homeDirectory = "/Users/oscar";
-
   home.stateVersion = "26.05";
-
-  home.packages = with pkgs; [
-    git
-  ];
 
   programs.git = {
     enable = true;
@@ -20,11 +15,17 @@
       };
 
       init.defaultBranch = "main";
-
       pull.rebase = true;
     };
   };
 
+  programs.zsh = {
+    enable = true;
+
+    shellAliases = {
+      rebuild = "sudo nix run github:nix-darwin/nix-darwin#darwin-rebuild -- switch --flake ~/Projects/atheon-config";
+    };
+  };
+
   programs.home-manager.enable = true;
- 
 }
