@@ -1,0 +1,17 @@
+theme = Dracula
+font-family = "Menlo Bold"
+
+shell-integration = zsh
+
+shell-integration-features = no-cursor
+
+cursor-style = "underline"
+
+macos-icon = custom-style
+macos-icon-frame = plastic
+
+unfocused-split-opacity = 1
+
+auto-update = check
+
+keybind = global:ctrl+grave_accent=toggle_quick_terminal

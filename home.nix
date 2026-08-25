@@ -5,6 +5,10 @@
   home.homeDirectory = "/Users/oscar";
   home.stateVersion = "26.05";
 
+  home.packages = with pkgs; [
+  	just
+  ];
+
   programs.git = {
     enable = true;
 
@@ -49,7 +53,12 @@
      # Nix config
      nixconfig = "cd ~/Projects/atheon-config";
    };
- }; 
+ };
+
+  xdg.configFile = {
+    "ghostty/config".source = ./config/ghostty/config;
+    "aerospace/aerospace.toml".source = ./config/aerospace/aerospace.toml;
+  }; 
 
   programs.home-manager.enable = true;
 }

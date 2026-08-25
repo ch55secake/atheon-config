@@ -40,7 +40,7 @@
    casks = [
      "ghostty"
      "pycharm"
-     "intellij-idea"
+     "goland"
      "nikitabobko/tap/aerospace"
    ];
 
