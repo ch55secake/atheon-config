@@ -52,6 +52,9 @@
 
    brews = [
      "anomalyco/tap/opencode"
+     "btop"
+     "bat"
+     "gh"
    ];
 
    casks = [
