@@ -104,6 +104,11 @@
    };
  };
 
+ programs.fzf = {
+   enable = true;
+   enableZshIntegration = true;
+ };
+
   xdg.configFile = {
     "ghostty/config".source = ./config/ghostty/config;
     "aerospace/aerospace.toml".source = ./config/aerospace/aerospace.toml;
