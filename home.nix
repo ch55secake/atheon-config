@@ -44,6 +44,10 @@
         User = "oscar";
         IdentityFile = "/Users/oscar/.ssh/mac-mini";
         IdentitiesOnly = true;
+
+        SetEnv = {
+          TERM = "xterm-256color";
+        };
       };
     };
   };
