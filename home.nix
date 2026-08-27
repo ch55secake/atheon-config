@@ -95,6 +95,10 @@
      nr = "nix run";
      update = "cd ~/Projects/atheon-config && nix flake update && rebuild";
 
+     reload = "exec zsh"
+
+     projs = "cd ~/Projects/$(ls ~/Projects | fzf --sync --preview "ls -l ~/Projects/ {}")"
+
      # Better defaults
      grep = "grep --color=auto";
      ll = "ls -lah";
