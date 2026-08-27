@@ -6,7 +6,7 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
-  	just
+  	    just
         go 
         gopls 
         python3
@@ -34,6 +34,7 @@
 
      init.defaultBranch = "main";
      pull.rebase = true;
+     push.autoSetupRemote = true;
 
      gpg.ssh.allowedSignersFile =
       "/Users/oscar/.config/git/allowed_signers";
