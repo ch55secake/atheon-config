@@ -63,7 +63,7 @@
      gp = "git push";
      gl = "git pull";
      gd = "git diff";
-     gco = "git checkout";
+     gch = "git checkout";
      gb = "git branch";
    
      nr = "nix run";
