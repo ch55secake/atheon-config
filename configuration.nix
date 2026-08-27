@@ -57,6 +57,7 @@
      "bat"
      "gh"
      "herdr"
+     "hx"
    ];
 
    casks = [
