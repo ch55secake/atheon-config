@@ -148,6 +148,7 @@
   xdg.configFile = {
     "ghostty/config".source = ./config/ghostty/config;
     "aerospace/aerospace.toml".source = ./config/aerospace/aerospace.toml;
+    "opencode/AGENTS.md".source = ./config/opencode/AGENTS.md;
   }; 
 
   programs.home-manager.enable = true;
