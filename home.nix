@@ -23,6 +23,31 @@
     '';
   };
 
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+
+    settings = {
+      "*" = {
+        AddKeysToAgent = "yes";
+      };
+
+     "github.com" = {
+       HostName = "github.com";
+       AddKeysToAgent = "yes";
+       UseKeychain = "yes";
+       IdentityFile = "/Users/oscar/.ssh/id_ed25519";
+      };
+
+      "mac-mini" = {
+        HostName = "192.168.1.113";
+        User = "oscar";
+        IdentityFile = "/Users/oscar/.ssh/mac-mini";
+        IdentitiesOnly = true;
+      };
+    };
+  };
+  
   programs.git = {
    enable = true;
 
