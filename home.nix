@@ -40,7 +40,7 @@
       };
 
       "mac-mini" = {
-        HostName = "100.82.100.16";
+        HostName = "192.168.1.113";
         User = "oscar";
         IdentityFile = "/Users/oscar/.ssh/mac-mini";
         IdentitiesOnly = true;
