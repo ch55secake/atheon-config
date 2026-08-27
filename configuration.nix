@@ -21,6 +21,8 @@
     NSGlobalDomain = {
       AppleICUForce24HourTime = false;
       "com.apple.swipescrolldirection" = false;
+
+      AppleWindowTabbingMode = "always";
     };
 
     dock = {
