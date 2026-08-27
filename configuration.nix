@@ -60,6 +60,7 @@
      "gh"
      "herdr"
      "hx"
+     "fzf"
    ];
 
    casks = [
