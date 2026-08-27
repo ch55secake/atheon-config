@@ -112,7 +112,32 @@
 
  programs.starship = {
    enable = true;
-   enableZshIntegration = true; 
+   enableZshIntegration = true;
+
+   settings = {
+     format = "$username@$hostname:$directory$git_branch$git_status\n$character";
+
+     username = {
+       show_always = true;
+       format = "[$user]($style)";
+     };
+
+     hostname = {
+       ssh_only = false;
+       format = "[$hostname]($style)";
+     };
+
+     directory = {
+       truncation_length = 0;
+       truncate_to_repo = false;
+       format = "[$path]($style) ";
+     };
+
+     character = {
+       success_symbol = "[>](bold green)";
+       error_symbol = "[>](bold red)";
+     };
+   };
  };
 
  programs.fzf = {
