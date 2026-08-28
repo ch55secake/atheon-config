@@ -149,6 +149,7 @@
     "ghostty/config".source = ./config/ghostty/config;
     "aerospace/aerospace.toml".source = ./config/aerospace/aerospace.toml;
     "opencode/AGENTS.md".source = ./config/opencode/AGENTS.md;
+    "helix/config.toml".source = ./config/helix/config.toml;
   }; 
 
   programs.home-manager.enable = true;
