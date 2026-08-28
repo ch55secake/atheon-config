@@ -11,6 +11,7 @@ These are the default working preferences for this configuration.
 
 - Create a pull request when a change has been completed. 
 - When creating one, follow the repository's pull request template completely. Do not bypass, replace, or invent a different format.
+- Never include the validation that you did when you raised the pull request. 
 
 ## Changes and Testing
 
