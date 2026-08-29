@@ -68,6 +68,7 @@
      "pycharm"
      "goland"
      "nikitabobko/tap/aerospace"
+     "tailscale-app"
    ];
 
    onActivation = {
