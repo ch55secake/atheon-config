@@ -47,8 +47,19 @@
 
         SetEnv = {
           TERM = "xterm-256color";
+         };
         };
-      };
+
+       "mac-mini-ts" = {
+         HostName = "oscars-mac-mini.tail480d66.ts.net";
+         User = "oscar";
+         IdentityFile = "/Users/oscar/.ssh/mac-mini";
+         IdentitiesOnly = true;
+
+         SetEnv = {
+           TERM = "xterm-256color";
+         };
+       };
     };
   };
   
