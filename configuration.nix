@@ -61,6 +61,7 @@
      "herdr"
      "hx"
      "fzf"
+     "nixfmt"
    ];
 
    casks = [
