@@ -6,11 +6,11 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
-  	    just
-        go 
-        gopls 
-        python3
-        uv
+    just
+    go
+    gopls
+    python3
+    uv
   ];
 
   home.file = {
@@ -32,11 +32,11 @@
         AddKeysToAgent = "yes";
       };
 
-     "github.com" = {
-       HostName = "github.com";
-       AddKeysToAgent = "yes";
-       UseKeychain = "yes";
-       IdentityFile = "/Users/oscar/.ssh/id_ed25519";
+      "github.com" = {
+        HostName = "github.com";
+        AddKeysToAgent = "yes";
+        UseKeychain = "yes";
+        IdentityFile = "/Users/oscar/.ssh/id_ed25519";
       };
 
       "mac-mini" = {
@@ -47,38 +47,37 @@
 
         SetEnv = {
           TERM = "xterm-256color";
-         };
         };
+      };
 
-       "mac-mini-ts" = {
-         HostName = "oscars-mac-mini.tail480d66.ts.net";
-         User = "oscar";
-         IdentityFile = "/Users/oscar/.ssh/mac-mini";
-         IdentitiesOnly = true;
+      "mac-mini-ts" = {
+        HostName = "oscars-mac-mini.tail480d66.ts.net";
+        User = "oscar";
+        IdentityFile = "/Users/oscar/.ssh/mac-mini";
+        IdentitiesOnly = true;
 
-         SetEnv = {
-           TERM = "xterm-256color";
-         };
-       };
+        SetEnv = {
+          TERM = "xterm-256color";
+        };
+      };
     };
   };
-  
+
   programs.git = {
-   enable = true;
+    enable = true;
 
-   settings = {
-     user = {
-       name = "ch55secake";
-       email = "oscardjbackup@gmail.com";
-     };
+    settings = {
+      user = {
+        name = "ch55secake";
+        email = "oscardjbackup@gmail.com";
+      };
 
-     init.defaultBranch = "main";
-     pull.rebase = true;
-     push.autoSetupRemote = true;
+      init.defaultBranch = "main";
+      pull.rebase = true;
+      push.autoSetupRemote = true;
 
-     gpg.ssh.allowedSignersFile =
-      "/Users/oscar/.config/git/allowed_signers";
-   };
+      gpg.ssh.allowedSignersFile = "/Users/oscar/.config/git/allowed_signers";
+    };
 
     signing = {
       key = "/Users/oscar/.ssh/id_ed25519.pub";
@@ -88,80 +87,80 @@
   };
 
   programs.zsh = {
-   enable = true;
+    enable = true;
 
-   shellAliases = {
-     rebuild = "sudo nix run github:nix-darwin/nix-darwin#darwin-rebuild -- switch --flake ~/Projects/atheon-config";
+    shellAliases = {
+      rebuild = "sudo nix run github:nix-darwin/nix-darwin#darwin-rebuild -- switch --flake ~/Projects/atheon-config";
 
-     # Navigation
-     ".." = "cd ..";
-     "..." = "cd ../..";
+      # Navigation
+      ".." = "cd ..";
+      "..." = "cd ../..";
 
-     # Git
-     gst = "git status";
-     ga = "git add";
-     gc = "git commit";
-     gp = "git push";
-     gl = "git pull";
-     gd = "git diff";
-     gch = "git checkout";
-     gb = "git branch";
-   
-     nr = "nix run";
-     update = "cd ~/Projects/atheon-config && nix flake update && rebuild";
+      # Git
+      gst = "git status";
+      ga = "git add";
+      gc = "git commit";
+      gp = "git push";
+      gl = "git pull";
+      gd = "git diff";
+      gch = "git checkout";
+      gb = "git branch";
 
-     reload = "exec zsh";
-     
-     # Better defaults
-     grep = "grep --color=auto";
-     ll = "ls -lah";
+      nr = "nix run";
+      update = "cd ~/Projects/atheon-config && nix flake update && rebuild";
 
-     # Nix config
-     nixconfig = "cd ~/Projects/atheon-config";
-   };
- };
+      reload = "exec zsh";
 
- programs.starship = {
-   enable = true;
-   enableZshIntegration = true;
+      # Better defaults
+      grep = "grep --color=auto";
+      ll = "ls -lah";
 
-   settings = {
-     format = "$username@$hostname:$directory$git_branch$git_status\n$character";
+      # Nix config
+      nixconfig = "cd ~/Projects/atheon-config";
+    };
+  };
 
-     username = {
-       show_always = true;
-       format = "[$user]($style)";
-     };
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
 
-     hostname = {
-       ssh_only = false;
-       format = "[$hostname]($style)";
-     };
+    settings = {
+      format = "$username@$hostname:$directory$git_branch$git_status\n$character";
 
-     directory = {
-       truncation_length = 0;
-       truncate_to_repo = false;
-       format = "[$path]($style) ";
-     };
+      username = {
+        show_always = true;
+        format = "[$user]($style)";
+      };
 
-     character = {
-       success_symbol = "[>](bold green)";
-       error_symbol = "[>](bold red)";
-     };
-   };
- };
+      hostname = {
+        ssh_only = false;
+        format = "[$hostname]($style)";
+      };
 
- programs.fzf = {
-   enable = true;
-   enableZshIntegration = true;
- };
+      directory = {
+        truncation_length = 0;
+        truncate_to_repo = false;
+        format = "[$path]($style) ";
+      };
+
+      character = {
+        success_symbol = "[>](bold green)";
+        error_symbol = "[>](bold red)";
+      };
+    };
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   xdg.configFile = {
     "ghostty/config".source = ./config/ghostty/config;
     "aerospace/aerospace.toml".source = ./config/aerospace/aerospace.toml;
     "opencode/AGENTS.md".source = ./config/opencode/AGENTS.md;
     "helix/config.toml".source = ./config/helix/config.toml;
-  }; 
+  };
 
   programs.home-manager.enable = true;
 }

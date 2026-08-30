@@ -45,39 +45,39 @@
   programs.zsh.enableCompletion = true;
 
   homebrew = {
-   enable = true;
-   enableZshIntegration = true;
+    enable = true;
+    enableZshIntegration = true;
 
-   taps = [
-     "anomalyco/tap"
-     "nikitabobko/tap"
-   ];
+    taps = [
+      "anomalyco/tap"
+      "nikitabobko/tap"
+    ];
 
-   brews = [
-     "anomalyco/tap/opencode"
-     "btop"
-     "bat"
-     "gh"
-     "herdr"
-     "hx"
-     "fzf"
-     "nixfmt"
-   ];
+    brews = [
+      "anomalyco/tap/opencode"
+      "btop"
+      "bat"
+      "gh"
+      "herdr"
+      "hx"
+      "fzf"
+      "nixfmt"
+    ];
 
-   casks = [
-     "ghostty"
-     "pycharm"
-     "goland"
-     "nikitabobko/tap/aerospace"
-     "tailscale-app"
-   ];
+    casks = [
+      "ghostty"
+      "pycharm"
+      "goland"
+      "nikitabobko/tap/aerospace"
+      "tailscale-app"
+    ];
 
-   onActivation = {
-     autoUpdate = true;
-     upgrade = true;
-     cleanup = "uninstall";
-   };
- };  
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      cleanup = "uninstall";
+    };
+  };
 
   system.stateVersion = 6;
 }
