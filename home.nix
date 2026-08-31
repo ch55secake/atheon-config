@@ -117,6 +117,8 @@
 
       # Nix config
       nixconfig = "cd ~/Projects/atheon-config";
+
+      k = "kubectl";
     };
   };
 
