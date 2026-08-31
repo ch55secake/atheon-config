@@ -62,6 +62,7 @@
       "hx"
       "fzf"
       "nixfmt"
+      "kubectl"
     ];
 
     casks = [
