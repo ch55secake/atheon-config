@@ -54,7 +54,7 @@
     ];
 
     brews = [
-      "anomalyco/tap/opencode"
+      "anomalyco/tap/opencode-v2"
       "btop"
       "bat"
       "gh"
