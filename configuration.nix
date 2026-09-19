@@ -71,6 +71,7 @@
       "goland"
       "nikitabobko/tap/aerospace"
       "tailscale-app"
+      "codex"
     ];
 
     onActivation = {
