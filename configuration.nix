@@ -63,6 +63,7 @@
       "fzf"
       "nixfmt"
       "kubectl"
+      "ansible"
     ];
 
     casks = [
