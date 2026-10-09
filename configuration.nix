@@ -72,7 +72,7 @@
       "goland"
       "nikitabobko/tap/aerospace"
       "tailscale-app"
-      "codex"
+      "rustrover"
     ];
 
     onActivation = {
