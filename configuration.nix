@@ -64,6 +64,7 @@
       "nixfmt"
       "kubectl"
       "ansible"
+      "vercel"
     ];
 
     casks = [
