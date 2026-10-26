@@ -64,7 +64,6 @@
       "nixfmt"
       "kubectl"
       "ansible"
-      "vercel"
     ];
 
     casks = [
@@ -74,6 +73,7 @@
       "nikitabobko/tap/aerospace"
       "tailscale-app"
       "rustrover"
+      "vercel"
     ];
 
     onActivation = {
