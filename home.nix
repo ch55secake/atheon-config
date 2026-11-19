@@ -5,6 +5,10 @@
   home.homeDirectory = "/Users/oscar";
   home.stateVersion = "26.05";
 
+  home.sessionPath = [
+    "$HOME/.ascii/bin"
+  ];
+
   home.packages = with pkgs; [
     just
     go
@@ -120,6 +124,10 @@
 
       k = "kubectl";
     };
+
+    initContent = ''
+      [ -f "$HOME/.config/ascii/boat.zsh" ] && source "$HOME/.config/ascii/boat.zsh"
+    '';
   };
 
   programs.starship = {
@@ -162,6 +170,7 @@
     "aerospace/aerospace.toml".source = ./config/aerospace/aerospace.toml;
     "opencode/AGENTS.md".source = ./config/opencode/AGENTS.md;
     "helix/config.toml".source = ./config/helix/config.toml;
+    "ascii/boat.zsh".source = ./config/boat.zsh;
   };
 
   programs.home-manager.enable = true;
