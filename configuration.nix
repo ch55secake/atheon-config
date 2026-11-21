@@ -74,6 +74,7 @@
       "tailscale-app"
       "rustrover"
       "vercel"
+      "antigravity-cli"
     ];
 
     onActivation = {
