@@ -50,6 +50,7 @@
 
     taps = [
       "anomalyco/tap"
+      "ch55secake/tap"
       "nikitabobko/tap"
     ];
 
@@ -67,6 +68,7 @@
     ];
 
     casks = [
+      "concerta"
       "ghostty"
       "pycharm"
       "goland"
