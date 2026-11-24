@@ -69,6 +69,7 @@
 
     casks = [
       "concerta"
+      "vela"
       "ghostty"
       "pycharm"
       "goland"
